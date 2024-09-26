@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basketball Player Registration</title>
+    <style>
+        /* Dark theme */
+        body {
+            background-color: #333;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Form container */
+        .form-container {
+            max-width: 500px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #444;
+            border: 1px solid #555;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Form labels and inputs */
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"], input[type="email"], input[type="number"], select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #666;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #666;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #777;
+        }
+
+        /* Form title */
+        .form-title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2 class="form-title">Basketball Player Registration</h2>
+        <form id="register-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email"><br><br>
+            <label for="phone">Phone:</label>
+            <input type="number" id="phone" name="phone"><br><br>
+            <label for="position">Position:</label>
+            <select id="position" name="position">
+                <option value="">Select Position</option>
+                <option value="Point Guard">Point Guard</option>
+                <option value="Shooting Guard">Shooting Guard</option>
+                <option value="Small Forward">Small Forward</option>
+                <option value="Power Forward">Power Forward</option>
+                <option value="Center">Center</option>
+            </select><br><br>
+            <input type="submit" value="Register">
+        </form>
+    </div>
+
+    <script>
+        // Handle form submission
+        const registerForm = document.querySelector('#register-form');
+
+        registerForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const position = document.getElementById('position').value;
+
+            // Add your registration logic here
+            // For demonstration purposes, we'll just display the registration details
+            alert(`Thank you, ${name}! Your registration details are:\nEmail: ${email}\nPhone: ${phone}\nPosition: ${position}`);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body {
+            background-color: #333;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #444;
+            border: 1px solid #555;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"], input[type="email"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #666;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #666;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #777;
+        }
+
+        #response {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #666;
+            border-radius: 5px;
+            background-color: #444;
+            color: #fff;
+        }
+
+        /* Rating container */
+        .rating-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Rating emojis */
+        .rating-emojis {
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Selected rating emoji */
+        .selected {
+            color: #ff9900;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Contact Us</h1>
+        <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="fa248f68-c637-43e7-9987-2110075a4045">
+            <label for="name">First Name:</label>
+            <input type="text" id="name" name="fname" placeholder="Your first name.."><br><br>
+
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your email address.."><br><br>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message"></textarea><br><br>
+            <input type="submit" value="Send">
+        </form>
+        <div id="response"></div>
+        <div class="rating-container">
+            <h2>How would you rate our services?</h2>
+            <div id="rating-emojis">
+                <span class="rating-emojis" data-rating="1">😐</span>
+                <span class="rating-emojis" data-rating="2">😊</span>
+                <span class="rating-emojis" data-rating="3">😃</span>
+                <span class="rating-emojis" data-rating="4">😄</span>
+                <span class="rating-emojis" data-rating="5">😆</span>
+            </div>
+            <div id="rating-message"></div>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('contact-form');
+        const responseDiv = document.getElementById('response');
+        const ratingEmojis = document.querySelectorAll('.rating-emojis');
+        const ratingMessage = document.getElementById('rating-message');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // For demonstration purposes, we'll just display the message
+            responseDiv.innerHTML = `Thank you, ${name}! Your message has been sent.`;
+        });
+
+        ratingEmojis.forEach((emoji) => {
+    emoji.addEventListener('click', () => {
+        // Remove the selected class from all emojis
+        ratingEmojis.forEach((e) => e.classList.remove('selected'));
+        // Add the selected class to the clicked emoji
+        emoji.classList.add('selected');
+        // Display the rating message
+        ratingMessage.innerHTML = `You rated us ${emoji.dataset.rating} out of 5!`;
+    });
+});
