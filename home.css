@@ -1,0 +1,109 @@
+body {
+    transition: background-color 0.5s, color 0.5s;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Navbar with the same color as the footer */
+.navbar-dark {
+    background-color: #9e4a4a; /* Same color as the footer */
+}
+.navbar-dark .navbar-brand, 
+.navbar-dark .navbar-nav .nav-link {
+    color: #9e4a4a;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #ccc;
+}
+
+/* Logo Styles */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+.company-name {
+    font-size: 24px;
+    margin-left: 10px;
+    color: #333;
+}
+
+/* Footer */
+.footer {
+    background-color: #9e4a4a;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+
+.footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+}
+
+.footer-section h4 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #fff;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li i {
+    margin-right: 10px;
+}
+
+.footer-section a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    text-decoration: underline;
+}
+
+.social-icons a {
+    font-size: 20px;
+    margin: 0 10px;
+}
+
+.social-icons a:hover {
+    color: #00aced;
+}
+
+.footer-bottom {
+    margin-top: 20px;
+    font-size: 14px;
+}
