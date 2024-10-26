@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="stylesheet" href="contact.html">
+    <link rel="stylesheet" href="ourhistory.html">
+    <link rel="stylesheet" href="ourteam.html">
+    <link rel="stylesheet" href="ourpartners.html">
+    <link rel="stylesheet" href="home.html">
+</head>
+<body>
+     <!-- JavaScript for Dark Mode Toggle -->
+     <script>
+        const toggleButton = document.getElementById('dark-mode-toggle');
+        const body = document.body;
+
+        toggleButton.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            if (body.classList.contains('dark-mode')) {
+                toggleButton.textContent = 'Light Mode';
+            } else {
+                toggleButton.textContent = 'Dark Mode';
+            }
+        });
+    </script>
+
+    <!-- JavaScript for Search Functionality -->
+    <script>
+        // Define a simple search mapping between terms and pages
+        const pages = {
+            "home": "index.html",
+            "about": "aboutus.html",
+            "history": "ourhistory.html",
+            "our history": "ourhistory.html",
+            "team": "ourteam.html",
+            "partners": "ourpartners.html",
+            "contact": "contact.html"
+        };
+
+        function performSearch() {
+            const query = document.getElementById('searchInput').value.toLowerCase(); // Get user input
+            const page = pages[query]; // Match the input with the page map
+
+            if (page) {
+                window.location.href = page; // Redirect to the matched page
+            } else {
+                alert("Page not found! Please try searching for 'home', 'about', 'history', 'team', 'partners', or 'contact'.");
+            }
+
+            return false; // Prevent form submission (since we're handling it with JS)
+        }
+    </script>
+
+    <!-- Include external Bootstrap and jQuery JS for responsive behavior -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>

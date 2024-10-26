@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        body {
+            background-color: #333;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #444;
+            border: 1px solid #555;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+
+        img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .card {
+            background-color: #555;
+            padding: 20px;
+            border: 1px solid #666;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .card:hover {
+            background-color: #666;
+        }
+
+        .card-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .card-text {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .card-button {
+            background-color: #666;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .card-button:hover {
+            background-color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>About Us</h1>
+        <p>Welcome to our basketball website! We are a team of passionate basketball enthusiasts who are dedicated to providing the best possible experience for our users. Our website is designed to be a one-stop shop for all your basketball needs, from news and updates to tips and advice.</p>
+        <img src="basketball-court.jpg" alt="Basketball Court">
+        <p>Our team is made up of experienced basketball players and coaches who have a deep understanding of the game. We are committed to providing accurate and up-to-date information, as well as expert analysis and commentary.</p>
+        <p>Whether you are a seasoned basketball player or just starting out, we hope that our website will be a valuable resource for you. We are always looking for ways to improve and expand our content, so please don't hesitate to contact us with any suggestions or feedback.</p>
+        <h2>Our Mission</h2>
+        <p>Our mission is to provide the best possible experience for our users, while promoting the sport of basketball and supporting the basketball community. We believe that basketball has the power to bring people together and make a positive impact on individuals and communities.</p>
+        <h2>Our Values</h2>
+        <p>We value honesty, integrity, and respect for all individuals. We believe in the importance of teamwork, sportsmanship, and fair play. We are committed to providing a safe and supportive environment for all our users.</p>
+        <div class="card">
+            <h2 class="card-title">Meet Our Team</h2>
+            <p class="card-text">Our team is made up of experienced basketball players and coaches who have a deep understanding of the game. We are committed to providing accurate and up-to-date information, as well as expert analysis and commentary.</p>
+            <button class="card-button" ><a href="ourteam.html">Learn More</a></button>
+        </div>
+        <div class="card">
+            <h2 class="card-title">Our History</h2>
+            <p class="card-text">Our website was founded in 2020 with the goal of providing a one-stop shop for all your basketball needs. We have since grown to become one of the leading basketball websites in the world.</p>
+            <button class="card-button"><a href="ourhistory.html">Learn More</a></button>
+        </div>
+        <div class="card">
+            <h2 class="card-title">Our Partners</h2>
+            <p class="card-text">We are proud to partner with some of the leading basketball organizations in the world. Our partners include the NBA, the WNBA, and the NCAA.</p>
+            <button class="card-button"><a href="ourpartners.html">Learn More</a></button>
+        </div>
+    </div>
+
+    <script>
+        const cards = document.querySelectorAll('.card');
+        const buttons = document.querySelectorAll('.card-button');
+
+        buttons.forEach((button, index) => {
+            button.addEventListener('click', () => {
+                // Add functionality to the button click event
+                if (index === 0) {
+                    alert('You clicked on the "Learn More" button!');
+                } else if (index === 1) {
+                    alert('You clicked on the "Meet Our Team" button!');
+                } else {
+                    alert('You clicked on the "Take a Tour" button!');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

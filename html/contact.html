@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Contact Us</h1>
+        <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <!-- Web3Forms access key -->
+            <input type="hidden" name="access_key" value="74c7dd03-c6eb-4d15-9753-607d2ccec986">
+            <input type="hidden" name="subject" value="New Submission from Contact Form">
+            <input type="hidden" name="from_name" value="Your Website Name">
+            <input type="hidden" name="redirect" value="https://web3forms.com/success">
+            
+            <label for="name">First Name:</label>
+            <input type="text" id="name" name="fname" placeholder="Your first name.." required>
+
+            <label for="lname">Last Name:</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Your email address.." required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Your message.." required></textarea>
+
+            <input type="submit" value="Send">
+        </form>
+        <div id="response"></div>
+
+        <!-- Rating section -->
+        <div class="rating-container">
+            <h2>How would you rate our services?</h2>
+            <div id="rating-emojis">
+                <span class="rating-emojis" data-rating="1">😐</span>
+                <span class="rating-emojis" data-rating="2">😊</span>
+                <span class="rating-emojis" data-rating="3">😃</span>
+                <span class="rating-emojis" data-rating="4">😄</span>
+                <span class="rating-emojis" data-rating="5">😆</span>
+            </div>
+            <div id="rating-message"></div>
+        </div>
+    </div>
+
+    <!-- hCaptcha -->
+    <script src="https://web3forms.com/client/script.js" async defer></script>
+    <!-- Link to external JS file -->
+    <script src="contact.js"></script>
+</body>
+</html>

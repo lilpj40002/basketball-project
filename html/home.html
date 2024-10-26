@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Basketball website with navigation bar, static image, and footer. Includes dark mode functionality.">
+    <title>Navigation Bar with Dark Mode</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="navbar">
+        <a class="navbar-brand" href="#">
+            <div class="logo">
+                <img src="C:\Users\HP\Desktop\basketball project\images\courgers.jpeg" alt="Cougars Logo">
+                <span class="company-name">Cougars</span>
+            </div>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#" style="color:black">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="aboutus.html" style="color:black">About</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color:black">Services</a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="ourhistory.html">Our History</a>
+                        <a class="dropdown-item" href="ourteam.html">Our Team</a>
+                        <a class="dropdown-item" href="ourpartners.html">Our Partners</a>
+                    </div>
+                </li>
+                <li class="nav-item active"></li>
+                    <a class="nav-link" href="register.html" style="color:black">Register</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html" style="color:black">Contact</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0" action="search.html" method="GET">
+                <input class="form-control mr-sm-2" type="search" name="query" placeholder="Search" aria-label="Search" required>
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>            
+            <button id="dark-mode-toggle" class="btn btn-dark ml-auto">Dark Mode</button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container my-4">
+        <h1>The Rules</h1>
+        <p>Basketball is a team sport.</p>
+        <p>Two teams of five players each try to score by shooting a ball through a hoop elevated 10 feet above the ground.</p>
+        <p>The game is played on a rectangular floor called the court, and there is a hoop at each end.</p>
+        <p>The court is divided into two main sections by the mid-court line.</p>
+        <p>If the offensive team puts the ball into play behind the mid-court line, it has ten seconds to get the ball over the mid-court line.</p>
+        <p>If it doesn't, then the defense gets the ball.</p>
+        <p>Once the offensive team gets the ball over the mid-court line, it can no longer have possession of the ball in the area behind the midcourt line.</p>
+        <p>If it does, the defense is awarded the ball.</p>
+        <p>The ball is moved down the court toward the basket by passing or dribbling. The team with the ball is called the offense. The team without the ball is called the defense.</p>
+        <p>The defense tries to steal the ball, contest shots, deflect passes, and garner rebounds.</p>
+        <p>The rules of basketball are fairly straightforward. However, for younger players, these rules can easily be forgotten once they take the floor.</p>
+        <p>The three-second rule, which we'll discuss later, is just one of many examples.</p>
+        <p>Before teaching the rules to your team, you must know them yourself. So keep reading, because by the end of this article, you'll be up to speed on all the basketball rules so you can teach your players and help them develop!</p>
+        <h1>Where Should New Coaches Start?</h1>
+        <p>Now that you understand the fundamentals, the smartest plan you can follow from here is to help players develop those skills with structured drills and practices.</p>
+        <p>Our FREE 72 Winning Youth Drills and Plays resource is designed for coaches like you, to help in:</p>
+        <p>Understanding the proper technique for the most important skills like shooting, passing, and dribbling</p>
+        <p>Teaching players these skills using easy-to-follow drills</p>
+        <p>Giving players structure with simple plays designed for youth athletes</p>
+        <p>It even includes diagrams and step-by-step instructions so you can help your players develop AND have fun doing it...</p>
+        <p>Even if you have little or no basketball (or coaching) experience.</p>
+        <p>Click the link below, and we’ll send you a copy right away (along with a Special "skill development" Bonus for your players).</p>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section contact-info">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+1234567890">+254711288964</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:info@example.com">praisejoynaliaka@gmail.com</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>2 Street, Nairobi, Kenya</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-section social-icons">
+                    <h4>Follow Us</h4>
+                    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Cougars. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Dark Mode Toggle Script -->
+    <script>
+        const toggleButton = document.getElementById('dark-mode-toggle');
+        const body = document.body;
+
+        toggleButton.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            if (body.classList.contains('dark-mode')) {
+                toggleButton.textContent = 'Light Mode';
+            } else {
+                toggleButton.textContent = 'Dark Mode';
+            }
+        });
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
